@@ -1,0 +1,36 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+-------------------------------------------------------------------------------------
+for: for es un statement que utilizamos para realizar una tarea repetitiva que cumple una condición.
+
+-------------------------------------------------------------------------------------
+
+&&: el operador lógico "AND", lo utilizamos para evaluar condiciones. Es decir, sin ambas condiciones que ingrasemos se cumplen, el código se ejecutará (o también podemos tomarlo de la siguiente manera: si ambas condiciones son verdaderas el código se ejecutará).
+
+ex. function operadoresLogicos(x, y) {
+    if (x > 10 && y < 20) {
+        console.log('Esta línea de código se ejecutará si y solo si las dos condiciones se cumplen')
+    } else {
+        consle.log('No se cumplieron las 2 condiciones')
+    }
+}
+
+operadoresLogicos(11, 12) 
+#output : 'Esta línea de código se ejecutará si y solo si las dos condiciones se cumplen'
+
+-------------------------------------------------------------------------------------
+
+||: el operador lógico "OR", lo utilizamos para evaluar condiciones. Es decir, si una de las condiciones que ingresamos se cumple, el código se ejecutará (o también podemos tomarlo de la siguiente manera: si una de las condiciones es verdadera, entonces el código se ejecutará).
+
+ex. function operadoresLogicos(x, y) {
+    if (x > 10 && y < 20) {
+        console.log('Esta línea de código se ejecutará si una de las condiciones se cumple')
+    } else {
+        consle.log('No se cumple ninguna condición')
+    }
+}
+
+operadoresLogicos(11, 40) 
+#output : 'Esta línea de código se ejecutará si una de las condiciones se cumple'
+
+!: el operador lógico "NOT", lo utilizamos para determinar el valor opuesto. Es decir, si una expresión nos retorna el valor de "true", al aplicar el operdor NOT en true, estaríamos cambiando su valor a "false"
