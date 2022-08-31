@@ -38,7 +38,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  return array.push(elemento)
+  array.push(elemento)
+  return array
 }
 
 
@@ -47,7 +48,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  return array.unshift(elemento)
+  array.unshift(elemento)
+  return array
 }
 
 
@@ -57,6 +59,13 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  newPalabra = ''
+  for (i = 0; i < palabras.length; i ++) {
+      // newPalabra = newPalabra + palabras[i] + ' '
+      newPalabra = `${newPalabra} ${palabras[i]}`
+      // console.log(newPalabra)
+  }
+  return newPalabra.trim()
 }
 
 
@@ -64,6 +73,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.includes(elemento)
 }
 
 
@@ -71,6 +81,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  suma = 0
+  for (i = 0; i < numeros.length; i++) {
+    suma = suma + numeros[i]
+  }
+  return suma
 }
 
 
@@ -78,6 +93,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  suma = 0
+  for (i = 0; i < resultadosTest.length; i++) {
+    suma = suma + resultadosTest[i]
+  }
+  return suma / resultadosTest.length
 }
 
 
@@ -85,20 +105,46 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  mayor = 0
+  for (i = 0; i < numeros.length; i++) {
+    if (mayor > numeros[i]) {
+      mayor = mayor
+    } else {
+      mayor = numeros[i]
+    }
+  }
+  return mayor
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  producto = 1
+  if (arguments.length === 0) {
+    return 0
+  } else if (arguments.length === 1) {
+    return arguments[0]
+  } else {
+    for (i = 0; i < arguments.length; i++) {
+       producto = producto * arguments[i]
+    }
+    return producto
+  }
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  contador = 0
+  for (i = 0; i < arreglo.length; i++) {
+    if (arreglo[i] > 18) {
+      contador++
+    }
+  }
+  return contador
 }
 
 
