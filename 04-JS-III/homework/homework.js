@@ -194,7 +194,7 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   let newArray = []
-  let arrayUnique = []
+  // let arrayUnique = []
   for (i = 0; i < array.length; i++) {
     if(array[i]==='Enero' || array[i]==='Marzo' || array[i]==='Noviembre') {
       newArray.push(array[i])
@@ -233,6 +233,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  cantidadRepeticiones = 10
+  almacenaNumero = []
+  for (i = 1; i <= cantidadRepeticiones; i++) {
+      numero = numero + 2
+      almacenaNumero.push(numero) 
+      if (i === numero){
+        break
+      }
+  }
+
+  if (almacenaNumero.length === 10) {
+    return almacenaNumero
+  } else {
+    return 'Se interrumpió la ejecución'
+  }
 }
 
 
@@ -243,7 +258,20 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  cantidadRepeticiones = 10
+  almacenaNumero = []
+  for (i = 1; i <= cantidadRepeticiones; i++) {
+      if (i === 5){
+        continue
+      } 
+      numero = numero + 2
+      almacenaNumero.push(numero) 
+      
+      
+  }
+  return almacenaNumero
 }
+
 
 
 // No modificar nada debajo de esta línea
